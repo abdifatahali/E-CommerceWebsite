@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pandesal Bakery</title>
+<link href="style-order.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico|Open+Sans" rel="stylesheet">
+<script src="js-order.js" async></script>
+</head>
+	
+	
+<body>
+<div class="container">
+  <header>
+    <div class="primary_header">
+      <h1 class="title" id="logo"> Pandesal Bakery</h1>
+		<h3 class="title"> Jacksonville, FL</h3>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+		  <li><a href="../1-Homepage/home.html">HOME</a> </li>
+		  <li><a href="../2-Menu/menu.html">MENU</a></li>
+		  <li><a href="order.html">ORDER ONLINE</a></li>
+		  <li><a href="../4-Contact/contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+	
+	
+<section id="content">
+	
+  <aside>
+	  
+    <section id="orderSection">
+      <form id="cart" name="cart" method="get" action="co_credit.html">
+        
+        <table id="cartTable">
+           <h1>Shopping Cart</h1>
+           
+			<tr>
+              <td>
+                 <label>Party Platter($29.95)</label>
+                 <input type="hidden" name="modelCost" id="modelCost" value="29.95" />
+                 <input type="hidden" id="modelName" name="modelName" value="Party Platter($29.95)" />
+              </td>
+              <td class="rightA">
+                 <label for="modelQty">Qty</label>
+                 <select name="modelQty" id="modelQty">
+					<option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option><option value="3">3</option>
+                    <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                    <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                    <option value="10">10</option>
+                 </select>   
+              </td>                 
+              <td>
+                 <input type="text" name="orderCost" id="orderCost" size="10" readonly />
+              </td>
+           </tr>
+			
+           <tr>
+              <td colspan="2"> 
+                 <input type="hidden" id="shippingType" name="shippingType" />                
+                 <fieldset>
+                    <legend>Party Platter Options</legend>
+                    <label><input type="radio" id="overnight" name="shipping" value="0.00" checked /> Sandwich Platter</label><br/>
+                    <label><input type="radio" id="day_2" name="shipping" value="10.95" /> Salad/Sandwich (+ $10.95)</label> <br/>  
+                    <label><input type="radio" id="ground" name="shipping" value="15.95" /> Soup/Salad/Sandwich (+ $15.95)</label> 
+                 </fieldset>
+              </td>
+              <td>
+                 <input type="text" name="shippingCost" id="shippingCost" size="10" readonly />
+              </td>
+           </tr> 
+			
+           <tr>
+              <td colspan="2" class="rightA">Subtotal</td>
+              <td class="outcell">
+                 <input type="text" name="subTotal" id="subTotal" size="10" readonly />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">Tax (5%)</td>
+              <td>
+                 <input type="text" name="salesTax" id="salesTax" size="10" readonly />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">TOTAL</td>
+              <td>
+                 <input type="text" name="cartTotal" id="cartTotal" size="10" readonly />
+             </td>
+           </tr>
+			
+        </table>
+		  
+		  <div id="finishOrder">
+        <input type="submit" id="submitOrder" value="Submit Order" formaction="../5-Testpage/test.html"/>
+			</div>
+      </form>
+   </section>
+	  
+  </aside> 
+	
+	
+<section id="main" >
+	   
+	   <div id="heading">
+		  <h1>PARTY PLATTERS</h1>
+      <p>The perfect addition to any event. Small or large scale catering orders for every occasion. 
+		  <br/>Choose from our signature combinations and customize to your preference. </p>
+		  </div>
+	   
+      <section id="items">
+		  
+         <div class="menuItem">
+             <div id="item0" >
+               <img src="images/sandwich.jpg" alt="sandwich-pic" />
+               <h1>Sandwich Platter</h1>
+               <p>10 pieces of Sandwich with Tapa - A marinated beef made in house with arugula, shaved carrots, cheddar cheese, and cucumbers on a Pandesal bread.</p>
+				<p>Price: $29.95</p> 
+			  </div>
+		  </div>
+		  
+		  <div class="menuItem">
+            <div id="item1" >
+               <img src="images/bread-salad.jpeg" alt="bread-salad" />
+               <h1>Sandwich & Salad Platter</h1>            
+               <p>Spring mix greens topped with croutons, carrots, and cucumbers drizzled with our signature Balsamic Vinaigrette (10pc of Tapa Sandwich included.)</p>
+               <p>Price: $40.90</p>
+            </div>
+         </div> 
+		  
+		  
+         <div class="menuItem">
+            <div id="item2" >
+               <img src="images/soup-combo.jpeg" alt="bread-salad-soup" />
+               <h1>Soup, Sandwich & Salad Platter</h1>            
+               <p>32 oz Tomato Soup top with house made Pandesal croutons and sour cream on the side. (10pc of Tapa Sandwich and Salad included.)</p>
+               <p>Price: $45.90</p>
+            </div>
+         </div> 
+		  
+	   </section>             
+  
+	</section>
+	
+</section>
+     
+
+
+  <footer class="secondary_header footer">
+    <div class="copyright">&copy;2018 - <strong>PANDESAL BAKERY</strong></div>
+  </footer>
+
+</body>
+</html>
